@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 import model.Arena;
 import model.Lightcyles1;
 import model.Lightcyles2;
@@ -22,7 +24,7 @@ public class ArenaRender implements Render {
 	 }
 
 
-	 public void render(Graphics g) {
+	 public void render(Graphics g) throws InterruptedException {
 		 
 	  // render the grid
 	  int cellSize = 32; // hard coded
@@ -48,7 +50,7 @@ public class ArenaRender implements Render {
 
 	 
 
-	  // render player droid
+	  // render players
 	 g.setColor(new Color(0, 1f, 0));
 	
 	  Lightcyles1 lightcyles1 = arena.getMoto1();
@@ -74,10 +76,9 @@ public class ArenaRender implements Render {
 	  
 	  g.setColor(new Color(0, 0, 1f));
 	  int x2 = (int) (lightcyles2.getX() * cellSize);
-	  pathx2.add(x2);
 	  int y2 = (int) (lightcyles2.getY() * cellSize);
 	  pathy2.add(y2);
-	  
+	  pathx2.add(x2);
 	  checkCollision1(pathx1,pathy1,x2,y2);
 	  
 	  g.fillRect(x2 + 2, y2 + 2, cellSize , cellSize );
@@ -91,29 +92,34 @@ public class ArenaRender implements Render {
 		 g.fillRect(x2 + 2, y2 + 2, cellSize , cellSize );  
       }
 	  
-	  // render square on droid
+	  // render square 
 	  g.setColor(new Color(0.7f, 0.5f, 0f));
 	  g.fillRect(x1 + 10, y1 + 10, cellSize - 20, cellSize - 20);
 	  g.fillRect(x2 + 10, y2+ 10, cellSize - 20, cellSize - 20);
 	 
 	}
 
- public void checkCollision2(ArrayList<Integer> pathx1,ArrayList<Integer> pathy1, int x2, int y2 ){
+ public void checkCollision2(ArrayList<Integer> pathx1,ArrayList<Integer> pathy1, int x2, int y2 ) throws InterruptedException{
 	     for(int i=0;i<pathx1.size();i++)
 	     {
 	     if(pathx1.get(i) == x2 && pathy1.get(i) == y2)
 	     {
-	     System.exit(0);
+	    	 
+	    	 JOptionPane.showMessageDialog(null, "le Joueur Bleu gagne");
+	    	 Thread.sleep(200);
+	    	 System.exit(0);
 	     }
 	     }
 	     return;
 	 } 
- public void checkCollision1(ArrayList<Integer> pathx2,ArrayList<Integer> pathy2, int x1, int y1){
+ public void checkCollision1(ArrayList<Integer> pathx2,ArrayList<Integer> pathy2, int x1, int y1) throws InterruptedException{
 	 for(int i=0;i<pathx2.size();i++)
      {
      if(pathx2.get(i) == x1 && pathy2.get(i) == y1)
      {
-    	System.exit(0);
+    	 JOptionPane.showMessageDialog(null, "le Joueur Vert gagne");
+    	 Thread.sleep(200);
+    	 System.exit(0);
      }
      }
      return;

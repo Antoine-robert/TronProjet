@@ -56,6 +56,11 @@ public class Updater {
 	 }
 	/** this will render the whole world **/
 	 public void render(Graphics g) {
-		 renderer.render(g);
+		 try {
+			renderer.render(g);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	 }
 	}

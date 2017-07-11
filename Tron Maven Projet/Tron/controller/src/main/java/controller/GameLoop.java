@@ -59,7 +59,7 @@ public class GameLoop extends Applet implements Runnable {
 	    try {
 	     Thread.sleep((20000000L - delta) / 1000000L);
 	    } catch (Exception e) {
-	     // It's an interrupted exception, and nobody cares
+	    
 	    }
 	
 	   }

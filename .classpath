@@ -7,5 +7,6 @@
 	<classpathentry kind="src" path="Tron Maven Projet/Tron/model/src/main/java"/>
 	<classpathentry kind="src" path="Tron Maven Projet/Tron/view/src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="Tron Maven Projet/bin"/>
 </classpath>
