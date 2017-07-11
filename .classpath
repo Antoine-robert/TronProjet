@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Tron Maven Projet/Tron/contract/src/main/java"/>
+	<classpathentry kind="src" path="Tron Maven Projet/Tron/contract/src/test/java"/>
+	<classpathentry kind="src" path="Tron Maven Projet/Tron/controller/src/main/java"/>
+	<classpathentry kind="src" path="Tron Maven Projet/Tron/main/src/main/java"/>
+	<classpathentry kind="src" path="Tron Maven Projet/Tron/model/src/main/java"/>
+	<classpathentry kind="src" path="Tron Maven Projet/Tron/view/src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Tron Maven Projet/bin"/>
+</classpath>
